@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>
+  <div fxLayout="row">
+    <div fxFlex="80%">
+      <div class="modal-title">
+        <ng-content select="[ModalTitle]"></ng-content>
+      </div>
+    </div>
+    <div fxFlex="20%">
+      <button mat-icon-button color="basic" class="close-button"
+              (click)="onCloseButtonClick()">
+        <mat-icon>close</mat-icon>
+      </button>
+    </div>
+  </div>
+</h1>
+<mat-dialog-content>
+  <ng-content select="[ModalContent]">
+  </ng-content>
+</mat-dialog-content>
+<div mat-dialog-actions *ngIf="hasActions">
+  <div class="actions-container">
+    <ng-content select="[ModalActions]">
+    </ng-content>
+  </div>
+</div>

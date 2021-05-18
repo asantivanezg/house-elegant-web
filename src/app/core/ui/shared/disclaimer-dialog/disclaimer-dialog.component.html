@@ -1,0 +1,23 @@
+<app-modal-dialog [dialogRef]="dialogRef">
+  <ng-container ModalTitle>
+    {{data?.title}}
+  </ng-container>
+  <ng-container ModalContent>
+    <ng-container *ngIf="data?.isHtml; else normal">
+      <div id="disclaimerHtmlContent" class="mat-body" [innerHTML]="data?.message"></div>
+    </ng-container>
+    <ng-template #normal>
+      <span class="mat-body centrado"> {{data?.message}}</span>
+    </ng-template>
+  </ng-container>
+  <ng-container ModalActions>
+    <ng-container
+      *ngIf="data && data.isAlert !== undefined && data.isAlert !== null && data.isAlert; else nonAlertMode">
+      <button mat-raised-button (click)="onConfirm()" class="btn-primary-disclaimer">Aceptar</button>
+    </ng-container>
+    <ng-template #nonAlertMode>
+      <button mat-raised-button (click)="onCancel()" class="btn-default-disclaimer">Cancelar</button>
+      <button mat-raised-button (click)="onConfirm()" class="btn-primary-disclaimer">Aceptar</button>
+    </ng-template>
+  </ng-container>
+</app-modal-dialog>

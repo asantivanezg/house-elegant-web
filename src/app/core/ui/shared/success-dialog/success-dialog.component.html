@@ -1,0 +1,14 @@
+<app-modal-dialog [dialogRef]="dialogRef">
+  <ng-container ModalTitle>
+    <span>{{data?.title}}</span>
+  </ng-container>
+  <ng-container ModalContent>
+    <div fxLayout="column" fxLayoutAlign="center center" fxLayoutGap="15px">
+      <mat-icon><span class="green">check_circle_outline</span></mat-icon>
+      <span> {{data?.message}}</span>
+    </div>
+  </ng-container>
+  <ng-container ModalActions>
+    <button mat-raised-button (click)="onCloseDialog()" class="btn-primary-disclaimer">Aceptar</button>
+  </ng-container>
+</app-modal-dialog>

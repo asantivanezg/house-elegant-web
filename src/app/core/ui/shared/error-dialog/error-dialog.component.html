@@ -1,0 +1,20 @@
+<app-modal-dialog [dialogRef]="dialogRef">
+  <ng-container ModalTitle>
+    <span class="red"> {{data?.title}}</span>
+  </ng-container>
+  <ng-container ModalContent>
+    <div class="centrado">
+      <mat-icon><span class="red size">report_problem</span></mat-icon>
+      <br>
+      <ng-container *ngIf="data?.isHtml; else normal">
+        <div id="errorHtmlContent" class="red" [innerHTML]="data?.message"></div>
+      </ng-container>
+      <ng-template #normal>
+        <span class="red"> {{data?.message}}</span>
+      </ng-template>
+    </div>
+  </ng-container>
+  <ng-container ModalActions>
+    <button mat-raised-button (click)="onCloseDialog()" class="btn-primary-disclaimer">Aceptar</button>
+  </ng-container>
+</app-modal-dialog>
