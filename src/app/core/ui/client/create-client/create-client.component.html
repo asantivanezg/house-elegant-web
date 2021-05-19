@@ -1,28 +1,28 @@
 <div class="container">
   <div fxLayout="column">
-    <div fxLayout="row" fxLayoutGap="15px">
+    <div fxLayout="row" fxLayoutGap="15px" [formGroup]="clientFromGroup">
       <div fxFlex="25%">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" >
           <mat-label>Nombre</mat-label>
-          <input matInput [(ngModel)]="name">
+          <input matInput [formControl]="nameFormControl">
         </mat-form-field>
       </div>
       <div fxFlex="25%">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" >
           <mat-label>DNI</mat-label>
-          <input matInput [(ngModel)]="dni">
+          <input matInput [formControl]="dniFormControl">
         </mat-form-field>
       </div>
       <div fxFlex="25%">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" >
           <mat-label>Dirección</mat-label>
-          <input matInput [(ngModel)]="address">
+          <input matInput [formControl]="addressFormControl">
         </mat-form-field>
       </div>
       <div fxFlex="25%">
-        <mat-form-field appearance="outline">
+        <mat-form-field appearance="outline" >
           <mat-label>Telefono</mat-label>
-          <input matInput [(ngModel)]="phone">
+          <input matInput [formControl]="phoneFormControl">
         </mat-form-field>
       </div>
     </div>
