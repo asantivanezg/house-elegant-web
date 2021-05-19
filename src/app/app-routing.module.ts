@@ -9,6 +9,10 @@ const routes: Routes = [
     component: HomeComponent,
     canActivate: []
   },
+  {
+    path: 'cliente',
+    loadChildren:  () => import(`./core/ui/client/client.module`).then(m => m.ClientModule),
+  },
   {path: '**', redirectTo: '', pathMatch: 'full'}
 
 ];

@@ -8,6 +8,8 @@ import {ModalDialogComponent} from "./layouts/modal-dialog/modal-dialog.componen
 import {LoadingComponent} from "./loading/loading.component";
 import {SidenavListComponent} from "./sidenav-list/sidenav-list.component";
 import {SuccessDialogComponent} from "./success-dialog/success-dialog.component";
+import {FlexLayoutModule} from "@angular/flex-layout";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -22,7 +24,10 @@ import {SuccessDialogComponent} from "./success-dialog/success-dialog.component"
   ],
   imports: [
     CommonModule,
-    MaterialModule
+    MaterialModule,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   exports: [
     MaterialModule,
@@ -32,7 +37,10 @@ import {SuccessDialogComponent} from "./success-dialog/success-dialog.component"
     DisclaimerDialogComponent,
     ModalDialogComponent,
     SidenavListComponent,
-    SuccessDialogComponent
+    SuccessDialogComponent,
+    FlexLayoutModule,
+    FormsModule,
+    ReactiveFormsModule,
   ]
 })
 export class SharedModule {

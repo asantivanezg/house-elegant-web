@@ -170,6 +170,7 @@ mat-form-field
     width: 100% !important
     margin-top: 5px !important
     margin-bottom: 5px !important
+
 .btn-default-disclaimer
   border: 1px solid $magenta !important
   text-transform: uppercase !important
@@ -263,7 +264,7 @@ mat-form-field
   color: $magenta !important
 
 .mat-form-field-underline
-  background-color: #cccccc !important
+  background-color: #000 !important
 
 .mat-form-field-ripple
   background-color: $magenta !important
@@ -315,6 +316,7 @@ tr.mat-header-row
 
 table
   width: 100%
+
   th
     background: #FAFAF9
     color: $magenta !important
@@ -399,6 +401,7 @@ table
 
 .ajuste
   margin-top: -8px !important
+
   i
     font-size: 17px
     @media screen and (max-width: 599px)
@@ -406,6 +409,7 @@ table
 
 .igx-time-picker__header
   background-color: $magenta
+
   .igx-time-picker__header-hour
     text-align: center
     color: white
@@ -481,29 +485,11 @@ textarea
   background: rgba(0, 0, 0, 0.05) !important
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick
-  color: $red-color
+  color: $magenta
 
 .mat-calendar-body-selected
   background-color: $red-color
   color: white
-
-input:-internal-autofill-selected
-  background-color: rgb(255, 255, 255) !important
-  background-image: none !important
-  color: -internal-light-dark-color(white, white) !important
-
-input:-webkit-autofill,
-input:-webkit-autofill:hover,
-input:-webkit-autofill:focus,
-textarea:-webkit-autofill,
-textarea:-webkit-autofill:hover,
-textarea:-webkit-autofill:focus,
-select:-webkit-autofill,
-select:-webkit-autofill:hover,
-select:-webkit-autofill:focus
-  -webkit-text-fill-color: black
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset
-  transition: background-color 5000s ease-in-out 0s
 
 .mat-button, .mat-raised-button, .mat-icon-button, .mat-stroked-button, .mat-flat-button, .mat-fab, .mat-mini-fab
   font-size: 11px !important
@@ -543,21 +529,22 @@ $custom-typography: mat-typography-config($font-family: '"Helvetica Neue", sans-
     color: #000000
 
 .mat-icon-button
-  color: $verde
+  color: $magenta
 
 .mat-icon
-  color: $verde
+  color: $magenta
   cursor: pointer
 
-.no-underline-mthfkr
-  .mat-form-field-appearance-outline .mat-form-field-outline
-    color: rgba(0,0,0,0) !important
+//.no-underline-mthfkr
+
+.mat-form-field-appearance-outline .mat-form-field-outline
+  color: $magenta !important
 
 .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background, .mat-checkbox-checked.mat-accent .mat-checkbox-background
   background-color: #E5008F !important
 
 .mat-form-field-appearance-outline.mat-form-field-disabled .mat-form-field-label
-  color: rgba(0, 0, 0, 0.58)
+  color: $magenta
 
 .mat-select-disabled .mat-select-value
   color: rgba(0, 0, 0, 0.58)
@@ -597,6 +584,7 @@ $custom-typography: mat-typography-config($font-family: '"Helvetica Neue", sans-
 
 .no-sync
   border-left: 4px solid #ffa501 !important
+
 .ink-sync
   padding: 10px
   margin-bottom: 15px
@@ -635,6 +623,7 @@ button
   height: 0px
   visibility: hidden
   font-family: $font
+
   .cont-snackbar
     background-color: #000
     color: #fff
@@ -642,12 +631,14 @@ button
     border-radius: 0px
     padding: 16px
     z-index: 1000
+
     a
       text-decoration: underline
       font-weight: normal
       color: #E5008F
       cursor: pointer
       margin-left: 5px
+
       &:hover
         color: #ffffff
 
@@ -676,5 +667,6 @@ button
     opacity: 1
 
 @media (hover: none)
+
 .mat-expansion-panel:not(.mat-expanded):not([aria-disabled=true]) .mat-expansion-panel-header:hover
   background: none

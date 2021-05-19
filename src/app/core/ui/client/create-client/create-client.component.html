@@ -1,0 +1,36 @@
+<div class="container">
+  <div fxLayout="column">
+    <div fxLayout="row" fxLayoutGap="15px">
+      <div fxFlex="25%">
+        <mat-form-field appearance="outline">
+          <mat-label>Nombre</mat-label>
+          <input matInput [(ngModel)]="name">
+        </mat-form-field>
+      </div>
+      <div fxFlex="25%">
+        <mat-form-field appearance="outline">
+          <mat-label>DNI</mat-label>
+          <input matInput [(ngModel)]="dni">
+        </mat-form-field>
+      </div>
+      <div fxFlex="25%">
+        <mat-form-field appearance="outline">
+          <mat-label>Dirección</mat-label>
+          <input matInput [(ngModel)]="address">
+        </mat-form-field>
+      </div>
+      <div fxFlex="25%">
+        <mat-form-field appearance="outline">
+          <mat-label>Telefono</mat-label>
+          <input matInput [(ngModel)]="phone">
+        </mat-form-field>
+      </div>
+    </div>
+    <div fxFlex="25" fxLayoutAlign="center center" fxLayoutGap="5px">
+      <button mat-raised-button class="btn-primary" matTooltip="Guardar cliente" (click)="saveClient()">
+        Guardar
+      </button>
+    </div>
+  </div>
+
+</div>

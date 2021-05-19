@@ -1,1 +1,161 @@
-<p>sidenav-list works!</p>
+<mat-nav-list>
+  <!--<a mat-list-item (click)="onSidenavClose('', '/')">-->
+  <!--<img src="/assets/images/home.svg" height="24px" alt=""> <span class="nav-caption">Inicio</span>-->
+  <!--</a>-->
+<!--  <mat-expansion-panel *ngFor="let parent of allRoutes; let i = index" class="mat-expansion-panel-container" [expanded]="i === 0"-->
+<!--                       (opened)="panelOpenStatePlat = setStep(i)" hideToggle-->
+<!--                       (closed)="panelOpenStatePlat = setStep(i)">-->
+<!--    <mat-expansion-panel-header>-->
+<!--      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"> <span class="white"> {{ parent.nombre }} </span>-->
+<!--      </mat-panel-title>-->
+<!--      <mat-panel-description>-->
+<!--        <mat-icon *ngIf="parent.open">keyboard_arrow_up</mat-icon>-->
+<!--        <mat-icon *ngIf="!parent.open">keyboard_arrow_down</mat-icon>-->
+<!--      </mat-panel-description>-->
+<!--    </mat-expansion-panel-header>-->
+<!--    <dl class="submenu">-->
+<!--      <dt *ngFor="let subModule of parent.hijos"><a (click)="onSidenavClose(subModule.ruta)">-->
+<!--        {{ subModule.nombre }}-->
+<!--      </a></dt>-->
+<!--      &lt;!&ndash;<dt><a (click)="onSidenavClose('plataforma/aterrizaje-y-despegue')">Aterrizaje y Despegue</a></dt>-->
+<!--      <dt><a (click)="onSidenavClose('plataforma/actas-constatacion')">Actas de Constatación</a></dt>-->
+<!--      <dt><a (click)="onSidenavClose('plataforma/solicitudes-notam')">Solicitudes de NOTAM</a></dt>-->
+<!--      <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-adp')">Cargo de Acceso ADP</a></dt>-->
+<!--      <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-sea')">Cargo de Acceso SEA</a></dt>&ndash;&gt;-->
+<!--    </dl>-->
+<!--  </mat-expansion-panel>-->
+
+
+
+  <!-- <mat-expansion-panel *ngFor="let parent of filterParents; let i = index" class="mat-expansion-panel-container" [expanded]="i === 0"
+                        (opened)="panelOpenStatePlat = setStep(i,panelOpenStatePlat)" hideToggle
+                        (closed)="panelOpenStatePlat = !panelOpenStatePlat">
+     <mat-expansion-panel-header>
+       <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"> <span class="verde"> {{ parent.nombre }} </span>
+       </mat-panel-title>
+       <mat-panel-description>
+         <mat-icon *ngIf="!panelOpenStatePlat">keyboard_arrow_up</mat-icon>
+         <mat-icon *ngIf="panelOpenStatePlat">keyboard_arrow_down</mat-icon>
+       </mat-panel-description>
+     </mat-expansion-panel-header>
+     <dl class="submenu">
+       <dt *ngFor="let subModule of parent.subModules"><a (click)="onSidenavClose(subModule.ruta)">
+         {{ subModule.nombre }}
+       </a></dt>
+       &lt;!&ndash;<dt><a (click)="onSidenavClose('plataforma/aterrizaje-y-despegue')">Aterrizaje y Despegue</a></dt>
+       <dt><a (click)="onSidenavClose('plataforma/actas-constatacion')">Actas de Constatación</a></dt>
+       <dt><a (click)="onSidenavClose('plataforma/solicitudes-notam')">Solicitudes de NOTAM</a></dt>
+       <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-adp')">Cargo de Acceso ADP</a></dt>
+       <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-sea')">Cargo de Acceso SEA</a></dt>&ndash;&gt;
+     </dl>
+   </mat-expansion-panel>-->
+
+
+  <!-- ABAJO ANTERIOR -->
+
+  <!--<mat-expansion-panel class="mat-expansion-panel-container" [expanded]="step === 0"
+                       (opened)="panelOpenStatePlat = setStep(0,panelOpenStatePlat)" hideToggle
+                       (closed)="panelOpenStatePlat = !panelOpenStatePlat">
+    <mat-expansion-panel-header>
+      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"> <span class="verde"> Plataforma </span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon *ngIf="!panelOpenStatePlat">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="panelOpenStatePlat">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <dl class="submenu">
+      <dt><a (click)="onSidenavClose('plataforma/aterrizaje-y-despegue')">Aterrizaje y Despegue</a></dt>
+      <dt><a (click)="onSidenavClose('plataforma/actas-constatacion')">Actas de Constatación</a></dt>
+      <dt><a (click)="onSidenavClose('plataforma/solicitudes-notam')">Solicitudes de NOTAM</a></dt>
+      <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-adp')">Cargo de Acceso ADP</a></dt>
+      <dt class="mb10"><a (click)="onSidenavClose('plataforma/cargo-acceso-sea')">Cargo de Acceso SEA</a></dt>
+    </dl>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="mat-expansion-panel-container" [expanded]="step === 1"
+                       (opened)="panelOpenStateFauna = setStep(1,panelOpenStateFauna)" hideToggle
+                       (closed)="panelOpenStateFauna = !panelOpenStateFauna">
+    <mat-expansion-panel-header>
+      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"><span
+        class="verde">Fauna </span></mat-panel-title>
+      <mat-panel-description>
+        <mat-icon *ngIf="panelOpenStateFauna">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!panelOpenStateFauna">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <dl class="submenu">
+      <dt><a (click)="onSidenavClose('fauna/avistamiento')">Avistamiento</a></dt>
+      <dt><a (click)="onSidenavClose('fauna/notificacion')">Notificación</a></dt>
+      <dt class="mb10"><a>Dispersión </a></dt>
+      <dt class="mb10"><a>Hallazgo</a></dt>
+      <dt class="mb10"><a>Impacto</a></dt>
+    </dl>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="mat-expansion-panel-container" [expanded]="step === 2"
+                       (opened)="panelOpenStateSEI = setStep(2,panelOpenStateSEI)" hideToggle
+                       (closed)="panelOpenStateSEI = !panelOpenStateSEI">
+    <mat-expansion-panel-header>
+      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"><span
+        class="verde"> SEI</span></mat-panel-title>
+      <mat-panel-description>
+        <mat-icon *ngIf="panelOpenStateSEI">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!panelOpenStateSEI">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <span>SEI options</span>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="mat-expansion-panel-container" [expanded]="step === 3"
+                       (opened)="panelOpenStateOpe = setStep(3,panelOpenStateOpe)" hideToggle
+                       (closed)="panelOpenStateOpe = !panelOpenStateOpe">
+    <mat-expansion-panel-header>
+      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"><span
+        class="verde">Gestión</span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon *ngIf="panelOpenStateOpe">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!panelOpenStateOpe">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <span>Operaciones options</span>
+  </mat-expansion-panel>
+  <mat-expansion-panel class="mat-expansion-panel-container" [expanded]="step === 4"
+                       (opened)="panelOpenStateAdmin = setStep(4,panelOpenStateAdmin)" hideToggle
+                       (closed)="panelOpenStateAdmin = !panelOpenStateAdmin">
+    <mat-expansion-panel-header>
+      <mat-panel-title><img src="/assets/images/file2.svg" height="24px" alt="" class="mr15"><span class="verde">Administración </span>
+      </mat-panel-title>
+      <mat-panel-description>
+        <mat-icon *ngIf="panelOpenStateAdmin">keyboard_arrow_up</mat-icon>
+        <mat-icon *ngIf="!panelOpenStateAdmin">keyboard_arrow_down</mat-icon>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <dl class="submenu">
+      <dt><a (click)="onSidenavClose('administration/roles-seguridad')">Configuracion de Roles de Seguridad</a></dt>
+      <dt><a (click)="onSidenavClose('administration/user-admin')">Configuración de Usuarios</a></dt>
+    </dl>
+  </mat-expansion-panel>-->
+
+
+  <!-- ARRIBA ANTERIOR -->
+
+
+
+    <a mat-list-item (click)="onSidenavClose('ordenes-compra')">
+      <img src="/assets/images/file.svg" height="24px" alt=""> <span
+      class="nav-caption">Ventas</span>
+    </a>
+    <a mat-list-item (click)="onSidenavClose('factura')">
+      <img src="/assets/images/file.svg" height="24px" alt=""> <span class="nav-caption">Guia de remisión</span>
+    </a>
+    <a mat-list-item (click)="onSidenavClose('cliente')">
+      <img src="/assets/images/file.svg" height="24px" alt=""> <span class="nav-caption">Clientes</span>
+    </a>
+    <a mat-list-item (click)="onSidenavClose('proveedor/registro')">
+      <img src="/assets/images/file.svg" height="24px" alt=""> <span class="nav-caption">Productos</span>
+    </a>
+<!--    <a mat-list-item (click)="onSidenavClose('administracion/parametros')">-->
+<!--      <img src="/assets/images/settings.svg" height="24px" alt="">-->
+<!--      <span class="nav-caption">Administración</span>-->
+<!--    </a>-->
+
+</mat-nav-list>
